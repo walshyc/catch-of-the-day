@@ -1,8 +1,7 @@
 import React from 'react'
 import { render } from 'react-dom'
-import App from './components/App'
-import StorePicker from './components/StorePicker'
+import Router from './components/Router'
 import './css/style.css';
 
 
-render(<App></App>, document.getElementById('main'));
+render(<Router></Router>, document.getElementById('main'));
