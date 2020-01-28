@@ -8,7 +8,6 @@ import Fish from "./Fish";
 import base from "../base";
 
 class App extends React.Component {
-  
   state = {
     fishes: {},
     order: {}
@@ -16,7 +15,7 @@ class App extends React.Component {
 
   static propTypes = {
     match: PropTypes.object
-  }
+  };
 
   componentDidMount() {
     const { params } = this.props.match;
@@ -145,6 +144,7 @@ class App extends React.Component {
           order={this.state.order}
           removeFromOrder={this.removeFromOrder}></Order>
         <Inventory
+          storeId={this.props.match.params.storeId}
           updateFish={this.updateFish}
           addFish={this.addFish}
           deleteFish={this.deleteFish}
